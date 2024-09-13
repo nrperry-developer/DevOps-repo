@@ -16,7 +16,7 @@ class ConvertTemp(Resource):
         target_scale = request.args.get('target_scale').lower()
 
         # Perform temperature conversion
-        converted_temp = self.convert_temperature(temp, scale, target_scale)
+        converted_temp = self.convert_temperature(temp, scale, target_scale_test)
         
         if converted_temp is None:
             return {'error': 'Invalid scale or target scale'}, 400
